@@ -1,0 +1,93 @@
+.Page {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+
+  &_topic {
+    margin: 3rem 0;
+  }
+
+  &_field {
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    &_one {
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    &_two {
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+      border-left: 1px solid black;
+    }
+
+    &_three {
+      border-bottom: 1px solid black;
+      border-left: 1px solid black;
+    }
+
+    &_four {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    &_five {
+      box-sizing: border-box;
+      border: 1px solid black;
+    }
+
+    &_six {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      border-left: 1px solid black;
+    }
+
+    &_seven {
+      border-top: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    &_eight {
+      border-top: 1px solid black;
+      border-right: 1px solid black;
+      border-left: 1px solid black;
+    }
+
+    &_nine {
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+    }
+  }
+}
+
+.Item {
+  width: 4rem;
+  height: 4rem;
+  box-sizing: border-box;
+
+  :hover {
+    background-color: rgb(202, 206, 206);
+  }
+
+  :disabled:hover {
+    background-color: inherit;
+  }
+}
+
+.Btn {
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  text-align: center;
+  padding: 0.3rem;
+  border: none;
+  background-color: inherit;
+
+}
