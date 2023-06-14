@@ -16,7 +16,7 @@ type FieldState = {
   nine: {sign: string | null, disable: boolean},
 }
 
-const initialState:MainState = {
+const initialState: MainState = {
   gameField: { 
     one: {sign: null, disable: false},
     two: {sign: null, disable: false},
