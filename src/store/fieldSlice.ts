@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"; 
 
 type MainState = {
-  gameField: FieldState
+  gameField: FieldState,
 }
 
 type FieldState = {
@@ -27,18 +27,18 @@ const initialState: MainState = {
     seven: {sign: null, disable: false},
     eight: {sign: null, disable: false},
     nine: {sign: null, disable: false},
-  } 
+  },
 } 
 
 const fieldSlice = createSlice({
-  name: 'main',
+  name: 'field',
   initialState,
   reducers: {
-    moveTo(state, action: PayloadAction<object>){
+    moveTo(state, action: PayloadAction<object>) {
       state.gameField = {...state.gameField, ...action.payload}
-    }
+    },
   }
 })
 
-export const {moveTo} = fieldSlice.actions
+export const { moveTo } = fieldSlice.actions
 export default fieldSlice.reducer
