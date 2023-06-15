@@ -76,13 +76,6 @@
   height: 4rem;
   box-sizing: border-box;
 
-  :hover {
-    background-color: rgb(202, 206, 206);
-  }
-
-  :disabled:hover {
-    background-color: inherit;
-  }
 }
 
 .Btn {
@@ -94,4 +87,16 @@
   border: none;
   background-color: inherit;
 
+  :hover {
+    background-color: rgb(202, 206, 206);
+  }
+
+  :disabled:hover {
+    background-color: inherit;
+  }
+}
+
+.Winner {
+  color: red;
+  //background-color: yellowgreen;
 }
