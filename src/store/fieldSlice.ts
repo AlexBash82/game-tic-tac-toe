@@ -1,44 +1,59 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit"; 
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+
+interface FieldState {
+  [key: string]: { sign: string | null; disable: boolean }
+}
 
 type MainState = {
-  gameField: FieldState,
+  gameField: FieldState
 }
 
-type FieldState = {
-  one: {sign: string | null, disable: boolean},
-  two: {sign: string | null, disable: boolean},
-  three: {sign: string | null, disable: boolean},
-  four: {sign: string | null, disable: boolean},
-  five: {sign: string | null, disable: boolean},
-  six: {sign: string | null, disable: boolean},
-  seven: {sign: string | null, disable: boolean},
-  eight: {sign: string | null, disable: boolean},
-  nine: {sign: string | null, disable: boolean},
-}
+// const sideNW = { name: 'sideNW', sign: null, disable: false }
+// const sideN = { name: 'sideN', sign: null, disable: false }
+// const sideNE = { name: 'sideNE', sign: null, disable: false }
+// const sideW = { name: 'sideW', sign: null, disable: false }
+// const sideM = { name: 'sideM', sign: null, disable: false }
+// const sideE = { name: 'sideE', sign: null, disable: false }
+// const sideSW = { name: 'sideSW', sign: null, disable: false }
+// const sideS = { name: 'sideS', sign: null, disable: false }
+// const sideSE = { name: 'sideSE', sign: null, disable: false }
+
+// const sideNW = { sign: null, disable: false }
+// const sideN = { sign: null, disable: false }
+// const sideNE = { sign: null, disable: false }
+// const sideW = { sign: null, disable: false }
+// const sideM = { sign: null, disable: false }
+// const sideE = { sign: null, disable: false }
+// const sideSW = { sign: null, disable: false }
+// const sideS = { sign: null, disable: false }
+// const sideSE = { sign: null, disable: false }
 
 const initialState: MainState = {
-  gameField: { 
-    one: {sign: null, disable: false},
-    two: {sign: null, disable: false},
-    three: {sign: null, disable: false},
-    four: {sign: null, disable: false},
-    five: {sign: null, disable: false},
-    six: {sign: null, disable: false},
-    seven: {sign: null, disable: false},
-    eight: {sign: null, disable: false},
-    nine: {sign: null, disable: false},
+  gameField: {
+    sideNW: { sign: null, disable: false },
+    sideN: { sign: null, disable: false },
+    sideNE: { sign: null, disable: false },
+    sideW: { sign: null, disable: false },
+    sideM: { sign: null, disable: false },
+    sideE: { sign: null, disable: false },
+    sideSW: { sign: null, disable: false },
+    sideS: { sign: null, disable: false },
+    sideSE: { sign: null, disable: false },
   },
-} 
+}
 
 const fieldSlice = createSlice({
   name: 'field',
   initialState,
   reducers: {
     moveTo(state, action: PayloadAction<object>) {
-      state.gameField = {...state.gameField, ...action.payload}
+      state.gameField = { ...state.gameField, ...action.payload }
     },
-  }
+    clearField(state) {
+      state.gameField = initialState.gameField
+    },
+  },
 })
 
-export const { moveTo } = fieldSlice.actions
+export const { moveTo, clearField } = fieldSlice.actions
 export default fieldSlice.reducer

@@ -19,63 +19,7 @@
     height: 12rem;
     display: flex;
     flex-wrap: wrap;
-
-    &_one {
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-    }
-
-    &_two {
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-      border-left: 1px solid black;
-    }
-
-    &_three {
-      border-bottom: 1px solid black;
-      border-left: 1px solid black;
-    }
-
-    &_four {
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-    }
-
-    &_five {
-      box-sizing: border-box;
-      border: 1px solid black;
-    }
-
-    &_six {
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
-      border-left: 1px solid black;
-    }
-
-    &_seven {
-      border-top: 1px solid black;
-      border-right: 1px solid black;
-    }
-
-    &_eight {
-      border-top: 1px solid black;
-      border-right: 1px solid black;
-      border-left: 1px solid black;
-    }
-
-    &_nine {
-      border-top: 1px solid black;
-      border-left: 1px solid black;
-    }
   }
-}
-
-.Item {
-  width: 4rem;
-  height: 4rem;
-  box-sizing: border-box;
-
 }
 
 .Btn {

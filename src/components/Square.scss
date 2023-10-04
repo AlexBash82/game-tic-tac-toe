@@ -1,0 +1,56 @@
+.Page_field {
+  &_sideNW {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+  }
+
+  &_sideN {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+  }
+
+  &_sideNE {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+  }
+
+  &_sideW {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+  }
+
+  &_sideM {
+    box-sizing: border-box;
+    border: 1px solid black;
+  }
+
+  &_sideE {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+  }
+
+  &_sideSW {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+  }
+
+  &_sideS {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+  }
+
+  &_sideSE {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+  }
+}
+
+.Item {
+  width: 4rem;
+  height: 4rem;
+  box-sizing: border-box;
+}
